@@ -7,7 +7,7 @@ echo "Hi"
 # set -e
 
 # Stop the running container (if any)
-container_name="friendly_allen"
+container_name="priceless_varahamihira"
 
 if [ $(docker ps -q -f name=$container_name) ]; then
     echo "Stopping the container: $container_name"
