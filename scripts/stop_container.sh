@@ -16,3 +16,5 @@ if [ $(docker ps -q -f name=$container_name) ]; then
 else
     echo "No running container found with name: $container_name"
 fi
+
+
