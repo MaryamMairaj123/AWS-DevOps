@@ -12,7 +12,7 @@ apt install -y awscli
 #aws s3 cp s3://myterraformprojectbucket2023/project.webp /var/www/html/project.png --acl public-read
 
 # Create a simple HTML file with the portfolio content and display the images
-cat <<EOF > /var/www/html/index.html
+cat <<-EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,10 +30,13 @@ cat <<EOF > /var/www/html/index.html
   </style>
 </head>
 <body>
-  <h1>Terraform Project Server 1</h1>
-  <h2>Instance ID: <span style="color:green">$INSTANCE_ID</span></h2>
-  <p>Welcome to CloudChamp's Channel</p>
+  <h1>Terraform Project Server 2</h1>
+  <h2>Instance ID: <span style="color:green">${INSTANCE_ID}</span></h2>
+  <p>Engr. Maryam Mairaj Cloud and DevOps Enthusiast</p>
   
+  <!-- Add the image from the S3 bucket -->
+  <img src="https://maryam-s3-bucket-project.s3.amazonaws.com/images/terraform.png" alt="Project Image" width="500px" height="300px">
+
 </body>
 </html>
 EOF
